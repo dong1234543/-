@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>济南隆兴隆五金建材批发公司 - 一站式购物平台</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* 添加画廊样式 */
+        .gallery-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .gallery-scroll {
+            display: flex;
+            gap: 30px;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
+
+        .gallery-scroll::-webkit-scrollbar {
+            display: none;  /* Hide scrollbar for Chrome, Safari and Opera */
+        }
+
+        .image-wrapper {
+            position: relative;
+            min-width: 300px;
+            height: 300px;
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.5s ease;
+            transform: perspective(1000px) rotateY(20deg) scale(0.9);
+        }
+
+        .image-wrapper:hover {
+            transform: perspective(1000px) rotateY(0deg) scale(1);
+            z-index: 2;
+        }
+
+        .gallery-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .image-wrapper:hover .gallery-image {
+            transform: scale(1.1);
+        }
+
+        .image-caption {
+            position: absolute;
+            bottom: -50px;
+            left: 0;
+            width: 100%;
+            padding: 10px;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            text-align: center;
+            transition: bottom 0.3s ease;
+        }
+
+        .image-wrapper:hover .image-caption {
+            bottom: 0;
+        }
+
+        .scroll-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            z-index: 1;
+            transition: all 0.3s ease;
+            opacity: 0;
+        }
+
+        .gallery-container:hover .scroll-button {
+            opacity: 1;
+        }
+
+        .scroll-button:hover {
+            background: rgba(0, 0, 0, 0.8);
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        .left {
+            left: 10px;
+        }
+
+        .right {
+            right: 10px;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0); }
+        }
+
+        .gallery-container {
+            animation: float 6s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">首页</a></li>
+                <li><a href="products.html">产品分类</a></li>
+                <li><a href="about.html">关于我们</a></li>
+                <li><a href="contact.html">联系我们</a></li>
+            </ul>
+        </nav>
+        <div class="hero">
+            <h1>济南隆兴隆五金建材批发公司</h1>
+            <p>为您提供最全的五金建材解决方案，品质保障，价格实惠！</p>
+            <a href="products.html" class="cta-button">立即选购</a>
+        </div>
+    </header>
+
+    <section id="gallery">
+        <h2>我们的店面与仓库</h2>
+        <div class="gallery-container">
+            <button class="scroll-button left" onclick="scrollLeft()">&lt;</button>
+            <div class="gallery-scroll" id="galleryScroll">
+                <div class="image-wrapper">
+                    <img src="images/store.jpg" alt="店面照片" class="gallery-image">
+                    <div class="image-caption">宽敞明亮的店面，为您提供舒适的购物体验</div>
+                </div>
+                <div class="image-wrapper">
+                    <img src="images/warehouse.jpg" alt="仓库照片" class="gallery-image">
+                    <div class="image-caption">现代化仓库，确保产品库存充足，快速发货</div>
+                </div>
+                <div class="image-wrapper">
+                    <img src="images/gallery1.jpg" alt="产品展示1" class="gallery-image">
+                    <div class="image-caption">优质产品展示1</div>
+                </div>
+                <div class="image-wrapper">
+                    <img src="images/gallery2.jpg" alt="产品展示2" class="gallery-image">
+                    <div class="image-caption">优质产品展示2</div>
+                </div>
+                <div class="image-wrapper">
+                    <img src="images/gallery3.jpg" alt="产品展示3" class="gallery-image">
+                    <div class="image-caption">优质产品展示3</div>
+                </div>
+                <div class="image-wrapper">
+                    <img src="images/gallery4.jpg" alt="产品展示4" class="gallery-image">
+                    <div class="image-caption">优质产品展示4</div>
+                </div>
+                <div class="image-wrapper">
+                    <img src="images/gallery5.jpg" alt="产品展示5" class="gallery-image">
+                    <div class="image-caption">优质产品展示5</div>
+                </div>
+                <div class="image-wrapper">
+                    <img src="images/gallery6.jpg" alt="产品展示6" class="gallery-image">
+                    <div class="image-caption">优质产品展示6</div>
+                </div>
+                <div class="image-wrapper">
+                    <img src="images/gallery7.jpg" alt="产品展示7" class="gallery-image">
+                    <div class="image-caption">优质产品展示7</div>
+                </div>
+            </div>
+            <button class="scroll-button right" onclick="scrollRight()">&gt;</button>
+        </div>
+    </section>
+
+    <footer>
+        <p>地址：济南市章丘区双泉路与汇泉路交叉口东180米（章丘义乌小商品批发市场北区F3-26）
+             电话：13791012198</p>
+        <p>&copy; 2023 济南隆兴隆五金建材批发公司 </p> 
+    </footer>
+    <script src="script.js" async></script>
+    <script>
+        function scrollLeft() {
+            const gallery = document.getElementById('galleryScroll');
+            const scrollAmount = Math.min(300, gallery.scrollLeft); // 确保不会滚动到负值
+            gallery.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+        }
+
+        function scrollRight() {
+            const gallery = document.getElementById('galleryScroll');
+            const scrollAmount = Math.min(300, gallery.scrollWidth - gallery.scrollLeft - gallery.offsetWidth);
+            gallery.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+        }
+
+        // 自动滚动功能
+        let autoScrollInterval;
+
+        function startAutoScroll() {
+            autoScrollInterval = setInterval(() => {
+                const gallery = document.getElementById('galleryScroll');
+                if (gallery.scrollLeft + gallery.offsetWidth >= gallery.scrollWidth) {
+                    gallery.scrollTo({ left: 0, behavior: 'smooth' });
+                } else {
+                    const scrollAmount = Math.min(300, gallery.scrollWidth - gallery.scrollLeft - gallery.offsetWidth);
+                    gallery.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+                }
+            }, 5000);
+        }
+
+        function stopAutoScroll() {
+            clearInterval(autoScrollInterval);
+        }
+
+        // 启动自动滚动
+        startAutoScroll();
+
+        // 当用户交互时停止自动滚动
+        const galleryScroll = document.getElementById('galleryScroll');
+        galleryScroll.addEventListener('mouseenter', stopAutoScroll);
+        galleryScroll.addEventListener('mouseleave', startAutoScroll);
+    </script>
+</body>
+</html> 
