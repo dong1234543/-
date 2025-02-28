@@ -1,0 +1,519 @@
+/* #region导航条start */
+.container{
+    width: 1190px;
+    margin: 0 auto;
+}
+ 
+    .topbar{
+        height: 30px;
+        background: #ECECEC;
+    }
+    .leftfix{
+        float: left;
+        
+    }
+    .rightfix{
+        float: right;
+  
+    }
+    .clearfix::after{
+         content: '';
+         display: block;
+         clear:both;
+    }
+    .welcome{
+        text-align: center;
+        height: 30px;
+        line-height: 30px;
+        /* 解决span的空隙问题 */
+        font-size: 0;
+        color: #666;
+        font-family: PingFangSC-Medium;
+        font-size: 12px;
+        font-weight: 500;
+    }
+    .welcome span,.welcome a{
+        font-size: 12px;
+    }
+    
+    /* 选中尚品汇欢迎你 */
+    .welcome>span:nth-child(1){
+        margin-right:28px ;
+    }
+    .login{
+     
+        border-right:1px solid #666 ;
+        padding-right: 10px;
+    }
+    .register{
+        padding-left: 10px;
+    }
+    .topbar_nav .list{
+        line-height: 30px;
+        text-align:center;
+        font-family: PingFangSC-Medium;
+        font-size: 12px;
+        font-weight: 500;
+    }
+    .topbar_nav .list li{
+        float: left;  
+    }
+    .topbar_nav .list li a{
+        padding-right: 15px;
+        padding-left: 15px;
+         border-right:1px solid #666;
+    }
+    .topbar_nav #li_a_last{
+        padding-right: 0px;
+        border-right: 0px;
+    }
+    .topbar_nav .list li:first-child>a{
+        padding-left:0px ;
+    }
+ /* #endregion导航条end */
+
+ /* #region顶部导航条start */
+  .header{
+    height: 120px;
+ 
+  }
+  .head_form{
+    margin-top: 42px;
+    font-size: 0;
+  }
+  .header .header_txt{
+    height:34px ;
+    width: 508px;
+    border: 1px solid rgba(221,48,45,1);
+  }
+  .header .header_button{
+    width: 80px;
+    height: 36px;
+    background: #DD302D;
+    border: 1px solid rgba(221,48,45,1);
+    vertical-align: top;
+    
+  }
+
+/* #endregion顶部导航条end */
+
+/* #region头部菜单 */
+.main_nav{
+    height: 48px;
+}
+.boss_nav{
+    width: 190px;
+    height: 48px;
+    background-color:#DD302D ;
+    position: relative;
+}
+/* 导航区左侧全部商品分类 */
+.boss_nav_letter{
+    width: 96px;
+height: 23px;
+font-family: PingFangSC-Medium;
+font-size: 16px;
+color: #FFFFFF;
+letter-spacing: 0;
+line-height: 22.4px;
+font-weight: 500;
+/* 全部商品居中 */
+position: absolute;
+left: 0;
+right: 0;
+top: 0;
+bottom: 0;
+margin: auto;
+}
+/* 导航区菜单 */
+.child_nav_option li a{
+
+    height: 23px;
+    float: left;
+    vertical-align: center;
+    padding-left:10px ;
+    padding-right: 10px;
+    margin-top: 13px;
+    font-family: PingFangSC-Medium;
+    font-size: 16px;
+    color: #333333;
+    font-weight: 500;
+}
+.dividing{
+height: 1px;
+background-color: #DD302D;
+
+}
+
+/* #endregion头部菜单 */
+
+/* #region主内容区 */
+.main_content .side_nav{
+    width: 190px;
+    height: 458px;
+    background: #F4F4F4;
+    margin-top: 10px;
+}
+.main_content .side_nav ul li a{
+    height: 20px;
+    font-family: PingFangSC-Medium;
+    font-size: 14px;
+    color: #333333;
+    line-height: 19.6px;
+    font-weight: 500;
+    text-decoration: none;
+    
+}
+/* 悬浮变红的效果 */
+.main_content .side_nav ul li:hover{
+   background-color: #DD302D;
+   color: #333333;
+}
+.main_content .side_nav ul li {
+    padding-top: 8px;
+   padding-left:16px ;
+}
+
+.main_content .banner{
+    width: 690px;
+    height: 458px;
+   background-color: aquamarine;
+   margin-left: 10px;
+   margin-top: 9.6px;
+}
+.side_other{
+    width: 288px;
+    height: 458px;
+ /* background-color: coral; */
+ margin-left: 10px;
+ margin-top: 9.6px;
+ 
+ background-color:white;
+ /* border: #d6d6d6 1px solid; */
+}
+.boss_menu{
+    position: relative;
+}
+.main_content .second_menu{
+    width: 700px;
+    height: 458px;
+    background-color: #ECECEC;
+    position: absolute;
+    left: 190px;
+    top: 0px;
+    /* 遮挡物默认为空，放在其父元素li才display:block */
+    display: none;
+    
+}
+
+.main_content .side_nav  li:hover .second_menu{
+    display: block;
+  
+}
+/* 设置遮挡的文字 */
+.side_nav .second_menu dd,dt{
+    height: 36px;
+    float: left;
+    
+}
+.second_menu dd span{
+    height: 20px;
+    border-left: 1px solid #999;
+    padding-right: 10px;
+    padding-left: 10px;
+    font-family: PingFangSC-Medium;
+    font-size: 14px;
+ 
+}
+.second_menu dt span{
+    height: 20px;
+    width: 70px;
+    /* border-right: 1px solid #999; */
+    padding-right: 10px;
+    padding-left: 10px;
+    font-family: PingFangSC-Medium;
+    font-size: 14px;
+    font-weight: 500;
+    
+}
+.main_content dl{
+    margin-top: 10px;
+     margin-left: 10px;
+     /* 调整页面总体的位置 */
+}
+  #dl_head{
+    font-family: PingFangSC-Medium;
+    font-size: 14px;
+    color: #000000;
+    font-weight: 500;
+  }
+  .side_other .message{
+     width: 260px;
+     height: 158px;
+     /*↗右上的背景色 */
+     /* background-color: gold; */
+     padding-top: 15px;
+     padding-left:14px ;
+     padding-right: 17px;
+     border: 1px solid #d9d9d9;
+
+  }
+  .side_other .other_nav{
+    width: 290px;
+    height: 275px;
+    /* background-color:yellowgreen; */
+    margin-top: 10px;
+    
+
+  }
+  
+  /* <!--上部分的尚品快报和更多的大盒子--> */
+  .side_other .message_top{
+            height: 28px;
+            border-bottom: #666 solid 1px;
+            /* background-color: brown; */
+
+            
+  }
+ 
+   /* 尚品快报 */
+  .message .message_fastMsg{
+          width: 56px;
+          height: 14px;
+          /* background-color: blueviolet; */
+          text-align: center;
+          line-height: 14px;
+          
+          /* margin-bottom: 10px; */
+          font-family: PingFangSC-Regular;
+           font-size: 14px;
+            color: #000000;
+            letter-spacing: 0;
+            font-weight: 400;
+  }
+  .message .message_more>a{
+    font-family: PingFangSC-Medium;
+    font-size: 12px;
+    color: #999999;
+    letter-spacing: 0;
+    font-weight: 500;
+  }
+   .message .message_bottom {
+        height: 118px;
+        /* background-color: #2d6edd; */
+         position: relative;
+         left: -10px;
+        
+   }
+   /* .message_bottom span{
+    /* background-color: aquamarine;
+     */
+    
+   /* 精灵图区 */
+ .other_nav_list li{
+    width: 48px;
+    height: 70px;
+    /* background-color: #DD302D; */
+    float: left;
+    margin-right: 22px;
+    margin-top: 16px;
+ 
+    
+ }
+ .other_nav_list li:first-child{
+    width: 48px;
+    height: 70px;
+    /* background-color: gold; */
+    float: left;
+    margin-left: 16px;
+    
+ }
+ .other_nav_list li:last-child{
+    width: 48px;
+    height: 70px;
+    /* background-color: gold; */
+    float: left;
+    margin-right: 16px;
+    
+ }
+ .other_nav_list li div{
+    height: 22px;
+    /* background-color: aquamarine; */
+    text-align: center;
+    line-height: 22px;
+    font-family: PingFangSC-Medium;
+    font-size: 14px;
+    color: #000000;
+    font-weight: 500;  
+          
+ }
+    
+/* #endregion主内容区 */
+
+/* #region秒杀 */
+.seckill .container{
+    margin-top: 10px;
+}
+.seckill .container img{
+    float: left;
+}
+.seckill .container img:nth-child(2){
+    margin-left: 11px;
+}
+.seckill .container img:nth-child(3){
+    margin-left: 11px;
+}
+.seckill .container img:nth-child(4){
+    margin-left: 11px;
+}
+.seckill .container img:nth-child(5){
+    margin-left: 11px;
+}
+
+/* #endregion秒杀 */
+
+/* #region楼层 */
+
+.fool{
+    height: 480px;
+    /* background-color: #DD302D; */
+    margin-top:48px ;
+    
+}
+ .fool_nav{
+    border-bottom: #DD302D 2px solid;
+ }
+.fool .fool_nav{
+    height:30px ;
+    
+}
+/* 家用电器四个字的布局 */
+.fool_nav .fool_nav_title{
+    width: 80px;
+    height: 30px;
+    font-family: PingFangSC-Medium;
+    font-size: 20px;
+    color: #000000;
+    letter-spacing: 0;
+    line-height: 30px;
+    font-weight: 600;
+    position: relative;
+    top: -4px;
+    
+}
+/* 右侧的小的选项 */
+.fool_nav_list li a {
+    float: left;
+    padding-right: 10px;
+    padding-left: 10px;
+    border-right:  #666 1px solid;
+    font-family: PingFangSC-Medium;
+    font-size: 16px;
+    color: #666666;
+    font-weight: 500;
+    position: relative;
+    left: 65px;
+}
+/* 右侧的小的选项鼠标悬浮变红的效果 */
+.fool_nav_list li a:hover{
+        color: #DD302D;
+}
+.fool_nav_list li:last-child{
+       border: 0;
+}
+.fool_nav_list{
+    margin-left: 575px;
+}
+
+/* 楼层下部分左1 */
+.fool_info .fool_info_item1{
+    width: 230px;
+    height: 432px;
+    background-color:#F4F4F4
+}
+.fool_info .fool_info_item2{
+    width: 340px;
+    height: 432px;
+    
+}
+.fool_info .fool_info_item3{
+    width: 206px;
+    height: 432px;
+    /* background-color: blueviolet; */
+    border-right: 1px solid #e2e2e2;
+}
+.fool_info .fool_info_item4{
+    width: 206px;
+    height: 432px;
+    background-color:gold;
+    border-right: 1px solid #e2e2e2;
+
+}
+.fool_info .fool_info_item5{
+    width: 206px;
+    height: 432px;
+    background-color: blanchedalmond;
+}
+.fool_info div{
+    float: left;
+}
+.fool_info_item1_head{
+    width: 190px;
+    height: 108px;
+    /* 上左右下 */
+    margin: 20px 20px 0;
+    /* background-color: #DD302D; */
+
+}
+/* 节能减排之类的选项的设置 */
+.fool_info_item1_head li  {
+    float: left;
+   height: 22px;
+   width: 90px;
+    /* font-family: PingFangSC-Medium; */
+    font-size: 16px;
+    /* color: #666666;
+    letter-spacing: 0;
+    line-height: 22px;
+    font-weight: 500; */
+    border-bottom:1.1px #d9d9d9 solid ; 
+    text-align: center;
+    
+}
+.fool_info_item1_head li a{
+    color: #666666;
+}
+/* 为了那个小缝隙 *//* 135左浮动 246右浮动 */
+#iteam1 li:nth-child(2n-1){
+    float: left;
+    
+}
+#iteam1 li:nth-child(2n){
+    float: right;
+    
+}
+/* 3 4 上下  */
+#iteam1 li:nth-child(3),#iteam1 li:nth-child(4){
+
+    margin-top: 14px;
+    margin-bottom: 14px;
+
+}
+.fool_info .fool_info_item1_picture{
+    width: 194px;
+    height: 242px;
+    /* background-color: #DD302D; */
+    margin: 30px 18px 32px 18px;
+}
+.fool_info_item2_picture{
+    width:340 ;
+    height:432;
+}
+/* 3号图片 */
+.fool_info_item3_pic_top,.fool_info_item3_pic_bottom{
+    width: 206px;
+    height: 215px;
+    border-bottom: 1px solid #e2e2e2;
+}
+
+/* #endregion楼层 */
