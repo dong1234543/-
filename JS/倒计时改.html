@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <textarea name="" id="">
+    用户注册协议
+    欢迎注册成为京东用户！您需要仔细阅读此条目
+    阿佛啊大饭店·1哦既缺乏独立空间·嗯哦启动快2弄2解耦2写、
+    贷款的破2哦配电间片都奥斯丁哦件破损的机器我觉得及时
+  </textarea>
+  <button disabled>我已阅读协议(5)</button>
+  <script>
+      
+                const tx = document.querySelector(`textarea`)
+                const bt = document.querySelector(`button`)
+                  let sec = 5
+           let n = setInterval(function() {
+                sec--
+                bt.innerHTML = `我已阅读协议(${sec})`
+                if(sec===0){
+                  clearInterval(n)
+                  bt.disabled = false
+                }
+            }, 1000);
+  </script>
+</body>
+</html>

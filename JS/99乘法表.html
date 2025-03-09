@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+    span{
+      display: inline-block;
+      width: 100px;
+     border: 2px solid pink;
+     padding: 5px;
+     border-radius: 5px;
+     text-align: center;
+     color: blueviolet;
+     margin: 1px;
+     background-image: linear-gradient( to right, red, pink );
+     white-space: nowrap;
+    
+    }
+  </style>
+</head>
+<body>
+           
+   <script>
+         function nine (heigh){
+            for(let i = 1 ; i <= heigh ; i++){
+              for(let j = 1 ; j <= i ; j++){
+                document.write(`<span>${i} * ${j} = ${i * j}</span>`)
+              }
+              document.write('</br>')
+            }
+         }
+         let temp = +prompt(`输入高度`)
+         nine(temp)
+   </script>
+</body>
+</html>

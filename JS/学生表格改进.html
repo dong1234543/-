@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+    table ,td,th{
+      border: 1px saddlebrown solid;
+     border-collapse: collapse;
+    }
+  </style>
+</head>
+<body>
+   <table>
+      <caption>学生列表</caption>
+       <thead>
+        <tr>
+           <td>序号</td>
+           <td>姓名</td>
+           <td>年龄</td>
+           <td>性别</td>
+           <td>家乡</td>
+        </tr>
+     
+   
+
+
+
+
+
+
+
+
+
+      <script>
+        let student = [
+           {name:`小明`,age:'18',hometown:`河北`,gender:`男` },
+          {name:`小红`,age:'19',hometown:`河南`,gender :`女`},
+          {name:`小刚`,age:'17',hometown:`山西`,gender :`男`},
+          {name:`小丽`,age:'18',hometown:`山东`,gender :`女`}
+        ]
+        //便利一下
+
+
+        for(let i = 0 ; i < student.length ; i++){
+          document.write(`
+   
+       <tbody>
+         <tr>
+          <td>${i+1}</td>
+          <td>${student[0].name}</td>
+          <td>${student[0].age}</td>
+          <td>${student[0].gender}</td>
+          <td>${student[0].name}</td>
+         </tr>
+       </tbody> 
+        `)
+           
+        }
+        document.write('</table>')  
+      </script>
+</body>
+</html>

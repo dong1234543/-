@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh_cn">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let height = +prompt('请输入行高'); // Prompt the user for the height of the pyramid
+    
+    // Loop through each row
+    for (let i = 1; i <= height; i++) {
+      // Print spaces for left alignment
+      for (let j = 1; j <= height - i; j++) {
+        document.write('&nbsp;&nbsp;');
+      }
+
+      // Print stars and inner spaces
+      for (let k = 1; k <= 2 * i - 1; k++) {
+        // For all rows except the last one
+        if (i !== height) {
+          if (k === 1 || k === 2 * i - 1) {
+            document.write('* ');
+          } else {
+            document.write('&nbsp;&nbsp;');
+          }
+        } else { 
+          // For the last row, print stars all across
+          document.write('* ');
+        }
+      }
+
+      document.write('<br/>'); // New line after each row
+    }
+  </script>
+</body>
+</html>

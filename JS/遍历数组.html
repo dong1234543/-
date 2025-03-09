@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+      <script>
+        let student = [
+           {name:`小明`,age:'18',hometown:`河北`,gender:`男` },
+          {name:`小红`,age:'19',hometown:`河南`,gender :`女`},
+          {name:`小刚`,age:'17',hometown:`山西`,gender :`男`},
+          {name:`小丽`,age:'18',hometown:`山东`,gender :`女`}
+        ]
+        //便利一下
+
+
+        for(let i = 0 ; i < student.length ; i++){
+          for(let k in student[i]){
+             console.log(student[i][k]);
+             
+          }
+        }
+      </script>
+</body>
+</html>

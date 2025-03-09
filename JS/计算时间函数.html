@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+        .outer{
+          display: flex;
+          border: 2px pink solid;
+          flex-direction: column;
+          justify-content: space-around;
+          text-align: center;
+          margin: 0 auto;
+          height: 300px;
+          align-items: center;
+        }
+        .outer2{
+          /* background-color: palegreen; */
+          display: flex;
+          flex-direction: row;
+          justify-content: space-around;
+          align-items: center;
+          width: 100%;
+         
+        }
+        .box{
+          height: 50px;
+          width: 150px;
+          box-shadow: 0 0 20px black;
+          background-image: linear-gradient( to right,pink ,red);
+          border-radius: 10px;
+          text-align:center;
+          line-height: 50px;
+        }
+       .outer span{
+           font-weight: 600;
+       }
+  </style>
+</head>
+   
+<body>
+  
+  <!-- <div class="outer">
+    <div style="margin-bottom: -150px;">
+      <span>131213秒是</span>
+    </div>
+    <div class="outer2">
+      <div class="box box1">1小时</div>
+      <div class="box box2">1分钟</div>
+      <div class="box box3">1秒</div>
+    </div>
+    
+  </div>
+   -->
+  <script>
+    //  客户输入秒数自动转换成时分秒
+     
+    //封装一个换算函数
+    function conversion(t){
+      let h = parseInt(time / 60 / 60 % 24 )
+      let m = parseInt(time /60 % 60)
+      let s = parseInt(time % 60) 
+      let temp =[]
+      temp = [h , m , s]
+      return temp
+    }
+
+    let time = prompt(`输入一个秒数`)
+    let result = conversion(time)
+    document.write(`
+         <div class="outer">
+    <div style="margin-bottom: -150px;">
+      <span>${time}秒是</span>
+    </div>
+    <div class="outer2">
+      <div class="box box1">${result[0]}小时</div>
+      <div class="box box2">${result[1]}分钟</div>
+      <div class="box box3">${result[2]}秒</div>
+    </div>
+    
+  </div>
+    
+    
+    `)
+
+
+  </script>
+</body>
+</html>

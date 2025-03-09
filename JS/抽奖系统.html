@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>抽奖系统</title>
+  <style>
+    .outer{
+      width: 300px;
+      height: 300px;
+      background-image: linear-gradient(pink ,red);
+      box-shadow: 0 0 20px black;
+        display: flex;
+       flex-direction: column;
+       text-align: center;
+       align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        
+    }
+    .outer>div{
+          margin:  20px;
+    }
+    
+
+  </style>
+</head>
+<body>
+    <div class="outer">
+      <div id="one">一等奖：<span></span></div>
+      <div id="two">二等奖：<span></span></div>
+      <div id="three">三等奖：<span></span></div>
+     <script>
+      //给个获奖者数组
+      const winner = [`张三`,`李四`,`王五 ` ,`江青`,`王洪文`,`烈箭鹰`]
+      const random1 = Math.floor(Math.random()*winner.length)//随机数
+      //获取DOM对象
+      const first = document.querySelector(`#one>span`)
+      //操作元素内容
+      first.innerHTML = winner[random1]
+      //删除已经抽过的人
+      winner.splice(random1,1)
+
+      const random2 = Math.floor(Math.random()*winner.length)//随机数
+      //获取DOM对象
+      const second = document.querySelector(`#two>span`)
+      //操作元素内容
+      second.innerHTML = winner[random2]
+      //删除已经抽过的人
+      winner.splice(random2,1)
+
+       const random3 = Math.floor(Math.random()*winner.length)//随机数
+      //获取DOM对象
+      const third = document.querySelector(`#three>span`)
+      //操作元素内容
+      third.innerHTML = winner[random3]
+      //删除已经抽过的人
+      // winner.splice(random,1)
+     </script>
+    </div>       
+</body>
+</html>

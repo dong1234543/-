@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh_cn">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+       .outer{
+         display: flex;
+         border-left: 2px pink solid ;
+         border-bottom: 2px pink solid ;
+         flex-direction: row;
+         justify-content: space-around;
+         align-items: flex-end;
+         height: 300PX;
+         text-align: center;
+         margin: 0 auto;
+       }
+       .inner{
+        background-color: pink;
+        width: 50px;
+        height: 200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+       }
+       .inner>h2{
+        font-size: 10px;
+         font-weight: 400;
+         margin-top: -15px;
+       }
+       .inner>h3{
+                      
+        font-size: 10px;
+        font-weight: 800;
+        margin-bottom: -20px;
+       }
+    
+  </style>
+</head>
+<body>
+    <!-- <div class="outer">
+         <div class=" inner inner1">
+          <h2>123</h2>
+          <h3>第一季度</h3>
+        </div>
+         <div class=" inner inner2">
+          <h2>123</h2>
+          <h3>第二季度</h3>
+         </div>
+         <div class=" inner inner3">
+          <h2>123</h2>
+          <h3>第三季度</h3>
+         </div>
+         <div class=" inner inner4">
+          <h2>123</h2>
+          <h3>第四季度</h3>
+         </div> -->
+    </div>
+    <script>
+          let season1 = prompt('输入第一季度的值')
+          let season2 = prompt('输入第二季度的值')
+          let season3 = prompt('输入第三季度的值')
+          let season4 = prompt('输入第四季度的值')
+          document.write(`<div class="outer">`)
+          document.write(`
+          <div class=" inner inner1" style="height:${season1}px">
+          <h2>${season1}</h2>
+          <h3>第一季度</h3>
+        </div>
+          
+          `)
+          document.write(`
+          <div class=" inner inner2" style="height:${season2}px">
+          <h2>${season2}</h2>
+          <h3>第一季度</h3>
+        </div>
+          
+          `)
+          document.write(`
+          <div class=" inner inner2" style="height:${season3}px">
+          <h2>${season3}</h2>
+          <h3>第一季度</h3>
+        </div>
+          
+          `)
+          document.write(`
+          <div class=" inner inner2" style="height:${season4}px">
+          <h2>${season4}</h2>
+          <h3>第一季度</h3>
+        </div>
+          
+          `)
+          document.write(`</div>`)
+    </script>
+</body>
+</html>

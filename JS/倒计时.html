@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+        .outer{
+          width: 500px;
+          height: 500px;
+          background-image:linear-gradient(pink ,red) ;
+          overflow: hidden;
+        }
+        .inner{
+          height: 100px;
+          width: 200px;
+          background-color: gold;
+          margin: 0 auto;
+          margin-top: 20px;
+          text-align:center;
+          line-height: 100px;
+        }
+  </style>
+</head>
+<body>
+      <div class="outer">
+        <div class="inner inner1">倒计时时间为</div>
+        <div class="inner inner2">现在有1秒</div>
+      </div>
+         <script>
+                let num = prompt(`输入时间，单位秒`)
+                const in1 = document.querySelector(`.inner1`)
+                const in2 = document.querySelector(`.inner2`)
+                in1.innerHTML = `倒计时时间为${num}秒`
+                let n = setInterval(function(){
+              
+                    num--
+                     in2.innerHTML = `现在还有${num}秒`
+                     if (num === 0){
+                        in2.innerHTML = `现在还有0秒`
+                        clearInterval(n)
+                     }  
+                 },1000) 
+                  
+                
+                 
+                
+            
+         </script>
+</body>
+</html>

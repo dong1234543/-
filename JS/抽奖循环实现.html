@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>抽奖系统</title>
+  <style>
+    .outer{
+      width: 300px;
+      height: 300px;
+      background-image: linear-gradient(pink ,red);
+      box-shadow: 0 0 20px black;
+        display: flex;
+       flex-direction: column;
+       text-align: center;
+       align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        
+    }
+    .outer>div{
+          margin:  20px;
+    }
+    
+
+  </style>
+</head>
+<body>
+    <div class="outer">
+      <div id="one">一等奖：<span></span></div>
+      <div id="two">二等奖：<span></span></div>
+      <div id="three">三等奖：<span></span></div>
+     <script>
+      //给个获奖者数组
+      const winner = [`张三`,`李四`,`王五 ` ,`江青`,`王洪文`,`烈箭鹰`]
+            
+    // 奖项级别数组
+    const prizeLevels = ['one', 'two', 'three']
+       
+       
+       for(let i = 0 ;i <= 2 ; i++){
+        const random = Math.floor(Math.random()*winner.length)
+         // 将获奖者显示在对应的奖项级别中
+         const prizeElement = document.querySelector(`#${prizeLevels[i]} > span`);
+         prizeElement.innerHTML = winner[random]
+         winner.splice(random,1)
+       }
+      </script>
+    </div>       
+</body>
+</html>
